@@ -19,6 +19,7 @@ function & XML_unserialize(&$xml){
 	$xml_parser->destruct();
 	return $data;
 }
+
 ###################################################################################
 # XML_serialize: serializes any PHP data structure into XML
 # Takes one parameter: the data to serialize. Must be an array.
@@ -60,17 +61,17 @@ class XML{
 
 	function XML(){
  		$this->parser = &xml_parser_create();
-		xml_parser_set_option(&$this->parser, XML_OPTION_CASE_FOLDING, false);
-		xml_set_object(&$this->parser, &$this);
-		xml_set_element_handler(&$this->parser, 'open','close');
-		xml_set_character_data_handler(&$this->parser, 'data');
+		xml_parser_set_option($this->parser, XML_OPTION_CASE_FOLDING, false);
+		xml_set_object($this->parser, $this);
+		xml_set_element_handler($this->parser, 'open','close');
+		xml_set_character_data_handler($this->parser, 'data');
 	}
-	function destruct(){ xml_parser_free(&$this->parser); }
+	function destruct(){ xml_parser_free($this->parser); }
 	function & parse(&$data){
 		$this->document = array();
 		$this->stack    = array();
 		$this->parent   = &$this->document;
-		return xml_parse(&$this->parser, &$data, true) ? $this->document : NULL;
+		return xml_parse($this->parser, $data, true) ? $this->document : NULL;
 	}
 	function open(&$parser, $tag, $attributes){
 		$this->data = ''; #stores temporary cdata
