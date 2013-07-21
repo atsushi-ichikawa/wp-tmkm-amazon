@@ -3,7 +3,7 @@ Contributors: mtdesigninfo
 Tags: amazon, affiliate
 Requires at least: 3.0.1
 Tested up to: 3.5
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: MIT License
 
 wp-tmkm-amazon is plug-in which generates the affiliate code of an Amazon associate easily.  
@@ -50,6 +50,10 @@ amazon.co.jpの商品へのリンクを記事中に簡単に貼れるプラグ�
 
 == Changelog ==
 
+2013/7/21
+　PHP 5.4で動作しないことがあったため、修正
+2013/7/17
+　WordPress Plugin Directory公開用にドキュメントを整備し、公開
 2012/12/5
 　"HOME画面に適用するか"オプションが誤動作していたため、修正
 2012/12/1
