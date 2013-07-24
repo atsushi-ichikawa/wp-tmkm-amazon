@@ -94,7 +94,7 @@ if( ( $_GET['mode'] ) == 'search' ){
 			$status = $AmazonXml["ItemSearchResponse"]["Items"]["Request"];
 
 			if( $status["IsValid"] == 'False' ){ // Request is invalid
-				echo '<p>与えられたリクエストが正しくありません</p>' . "\n";
+				echo '<p>アマゾンの検索上限を超えたかも知れません。</p>' . "\n";
 			}else{ // results were found, so display the products
 	
 				// --- Display the product data returned from the XML ---
