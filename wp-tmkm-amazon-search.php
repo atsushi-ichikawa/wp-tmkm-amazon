@@ -15,6 +15,8 @@ $amazonparse = & new GetAmazonXmlParse();
 $AssociatesID = '';
 $output = '';
 $associatesid = !empty($_GET['AID']) ? $_GET['AID'] : $AssociatesID;
+// 2014.1.27
+$associatesid = htmlspecialchars($associateid,ENT_QUOTES);
 
 $html_head =
 		'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n" .
@@ -94,7 +96,7 @@ if( ( $_GET['mode'] ) == 'search' ){
 			$status = $AmazonXml["ItemSearchResponse"]["Items"]["Request"];
 
 			if( $status["IsValid"] == 'False' ){ // Request is invalid
-				echo '<p>アマゾンの検索上限を超えたかも知れません。</p>' . "\n";
+				echo '<p>与えられたリクエストが正しくありません</p>' . "\n";
 			}else{ // results were found, so display the products
 	
 				// --- Display the product data returned from the XML ---

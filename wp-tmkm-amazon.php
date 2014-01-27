@@ -4,7 +4,7 @@ Plugin Name: wp-tmkm-amazon
 Plugin URI: http://blog.openmedialabo.net/
 Description: ASIN を指定して Amazon から個別商品の情報を取出します。BOOKS, DVD, CD は詳細情報を取り出せます。
 Author: ともかめ / Romeo
-Version: 1.5b
+Version: 1.5.3
 Author URI: http://blog.openmedialabo.net/
 Special Thanks: Keith Devens.com (http://keithdevens.com/software/phpxml)
 Special Thanks: websitepublisher.net (http://www.websitepublisher.net/article/aws-php/)

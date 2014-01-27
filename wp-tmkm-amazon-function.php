@@ -171,7 +171,8 @@ class GetAmazonXmlParse {
 		$xmlFeed = $url . '&Signature=' . str_replace('%7E', '~', rawurlencode($signature));
 		// --- Include the cache package ---
 		// IMPORTANT - enter the path to Lite.php
-		include_once( $tmkm_amazon_config['litephp_path'] );
+//		include_once( $tmkm_amazon_config['litephp_path'] );
+		include_once( 'Cache/Lite.php' );
 
 		// --- Set an ID for this cache ---
 		$id = $tmkm_amazon_config['JPendpoint'] . '?' . $id;
